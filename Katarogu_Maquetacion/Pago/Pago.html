@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./Pago.css">
+  <title>Pago - Tarjeta</title>
+</head>
+<body>
+  <header>
+    <span>Katarogu</span>
+  </header>
+
+  <section class='toggle'>
+    <label>Tarjeta</label>
+    <div class='toggle__switch'>
+      <input onclick='toggleSwitch()' type= "checkbox" id='toggleSwitch'/>
+    </div>
+    <label >PayPal</label>
+  </section>
+
+  <div class='container' id="container">
+    <div class="container__form" id="forms">
+
+      <div class='container__form-header'> 
+        <p class='p'>Catalogo<br> <strong>Nombre Empresa</strong></br></p>
+        <label class='label'><strong>$5</strong></label>
+      </div>
+      <form class="container__form-card" id="tarjeta">
+        <div class='container__form-card-content'> 
+          <input class="input" type="text" placeholder="Nombre titular de la tarjeta" />
+          <input class="input" type="password" placeholder="Número de tarjeta" />
+          <div class="container__form-card-data">
+            <input type="text"  placeholder="MM">
+            <input type="text"  placeholder="AA">
+            <input type="text"  placeholder="CVC">
+          </div>
+          <button class="button">Pagar</button>
+        </div>
+      </form>
+
+      <form class="container__form-paypal" id='paypal'>
+        <div class="container__form-paypal-content">
+          <input class="input" type="email" placeholder="Email" />
+          <input class="input" type="password" placeholder="Contraseña" />
+          <input class="input" type="text" placeholder="Nombre de tienda" />
+          <button class="button">Registrar</button>
+        </div>
+      </form>
+
+    </div>
+
+    <div class="container__description" id="description">
+      <div class="container__description-text">
+        <p >
+          Pago 100% seguro, tus datos de pago no serán guardados en nuestra base de datos.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="./Pago.js"></script>
+</body>
+</html>

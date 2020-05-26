@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./edit_product.css">
+  <title>Edición del Producto</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <span>NombreTienda</span>
+      <div class="header__menu">
+        <div class="header__menu-profile">
+          <img src="../images/ajustes.svg" alt="Ajustes">
+        </div>
+        <ul>
+          <li><a href="/">Editar información</a></li>
+          <li> <a href="/"> Cambiar contraseña</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="Product">
+
+      <div id="" class="Product__start">
+        <input type="text" class="Product__name input" placeholder="Nombre" />
+        <input type="text" class="Product__prince input" placeholder="Precio" />
+        <textarea  class="Product__description input" placeholder="Descripción" ></textarea>
+        <button class="btn__save button">Guardar</button>
+        <button class="btn__cancel button">Cancelar</button>
+      </div>
+
+      <div id="" class="Product__image">
+
+        <div class="file__upload">
+          <label for="file-upload" >Subir Imagen</label>
+          <input  style="display: none;" id="file-upload" type="file" formenctype="multipart/form-data"></input>
+        </div>
+        
+        <div class="image__container">
+          <div class="img-1">
+            <img  src="../images/corazon.svg" alt="Producto" />
+              <label for="" >X</label>
+          </div>
+          <div class="img-1">
+            <img  src="../images/pantalon.jpg" alt="Producto" />
+            <label for="">X</label>
+          </div>
+          <div class="img-1">
+            <img  src="../images/corazon.svg" alt="Producto" />
+              <label for="" >X</label>
+          </div>
+          <div class="img-1">
+            <img  src="../images/pantalon.jpg" alt="Producto" />
+            <label for="">X</label>
+          </div>
+          <div class="img-1">
+            <img  src="../images/corazon.svg" alt="Producto" />
+              <label for="" >X</label>
+          </div>
+          <div class="img-1">
+            <img  src="../images/pantalon.jpg" alt="Producto" />
+            <label for="">X</label>
+          </div>
+          
+        </div>
+
+        <p>La imagen seleccionada será la imagen principal del producto</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

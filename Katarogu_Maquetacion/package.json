@@ -1,0 +1,16 @@
+{
+  "name": "katarogu_maquetacion",
+  "version": "1.0.0",
+  "description": "Maquetación sitio web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "Isaac Celi Amores",
+  "license": "MIT"
+}

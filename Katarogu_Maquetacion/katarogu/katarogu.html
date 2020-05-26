@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./katarogu.css">
+  <title>Katagoru</title>
+</head>
+<body>
+  <div class="container_up">
+    <header class="header">
+      <span>NombreTienda</span>
+      <div class="header__menu">
+        <div class="header__menu-profile">
+          <img src="../images/ajustes.svg" alt="Ajustes">
+        </div>
+        <ul>
+          <li><a href="/">Editar información</a></li>
+          <li> <a href="/"> Cambiar contraseña</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="newProduct">
+
+      <div class="newProduct__button">
+        <button onclick=onClick() id="newProduct__button" class="button">Nuevo Producto</button>
+      </div>
+
+      <div id="newProduct__center" class="newProduct__center none">
+        <input type="text" class="newProduct__name input" placeholder="Nombre" />
+        <input type="text" class="newProduct__prince input" placeholder="Precio" />
+        <textarea  class="newProduct__description input" placeholder="Descripción" ></textarea>
+        <button class="btn__save button">Guardar</button>
+        <button class="btn__cancel button">Cancelar</button>
+      </div>
+
+      <div id="newProduct__image" class="newProduct__image none">
+
+        <div class="file__upload">
+          <label for="file-upload" >Subir Imagen</label>
+          <input  style="display: none;" id="file-upload" type="file" formenctype="multipart/form-data"></input>
+        </div>
+        
+        <div class="image__container">
+          <div class="img-1">
+            <img  src="../images/corazon.svg" alt="Producto" />
+              <label for="" >X</label>
+          </div>
+          <div class="img-1">
+            <img  src="../images/pantalon.jpg" alt="Producto" />
+            <label for="">X</label>
+          </div>
+          <div class="img-1">
+            <img  src="../images/corazon.svg" alt="Producto" />
+              <label for="" >X</label>
+          </div>
+          <div class="img-1">
+            <img  src="../images/pantalon.jpg" alt="Producto" />
+            <label for="">X</label>
+          </div>
+          <div class="img-1">
+            <img  src="../images/corazon.svg" alt="Producto" />
+              <label for="" >X</label>
+          </div>
+          <div class="img-1">
+            <img  src="../images/pantalon.jpg" alt="Producto" />
+            <label for="">X</label>
+          </div>
+          
+        </div>
+
+        <p>La imagen seleccionada será la imagen principal del producto</p>
+      </div>
+    </section>
+
+    <section class="product">
+
+      <div class="product__startText">
+        <h2>Mis productos</h2>
+      </div>
+
+      <div class="product-view">
+        
+        <div class="product__card">
+  
+          <div class="product__card-header">
+  
+            <div class="product__card-header-left">
+              <h3>Nombre</h3>
+              <h4>Prod-001</h4>
+            </div>
+  
+            <div class="product__card-header-right">
+              <h3>$10,50</h3>
+            </div>
+  
+          </div>
+  
+          <div class="product__card-center">
+            <img src="../images/pantalon.jpg" alt="Pantalon">
+            <p>Pantalon Jean en venta aproveche lleve lleve solo quedan pocos son buenos son bonitos son baratos</p>
+          </div>
+  
+          <div class="product__card-footer">
+            <button name="button__abrir" class="btn_product-delete">Eliminar este producto</button>
+          </div>
+
+        </div>
+        
+
+        <div class="product__card">
+  
+          <div class="product__card-header">
+  
+            <div class="product__card-header-left">
+              <h3>Nombre</h3>
+              <h4>Prod-001</h4>
+            </div>
+  
+            <div class="product__card-header-right">
+              <h3>$10,50</h3>
+            </div>
+  
+          </div>
+  
+          <div class="product__card-center">
+            <img src="../images/corazon.svg" alt="Pantalon">
+            <p>Pantalon Jean en venta aproveche lleve lleve solo quedan pocos son buenos son bonitos son baratos</p>
+          </div>
+  
+          <div class="product__card-footer">
+            <button name="button__abrir" class="btn_product-delete">Eliminar este producto</button>
+          </div>
+  
+        </div>
+
+
+        <div class="product__card">
+  
+          <div class="product__card-header">
+  
+            <div class="product__card-header-left">
+              <h3>Nombre</h3>
+              <h4>Prod-001</h4>
+            </div>
+  
+            <div class="product__card-header-right">
+              <h3>$10,50</h3>
+            </div>
+  
+          </div>
+  
+          <div class="product__card-center">
+            <img src="../images/corazon.svg" alt="Pantalon">
+            <p>Pantalon Jean en venta aproveche lleve lleve solo quedan pocos son buenos son bonitos son baratos</p>
+          </div>
+  
+          <div class="product__card-footer">
+            <button id="button__abrir" class="btn_product-delete">Eliminar este producto</button>
+          </div>
+  
+        </div>
+
+        <div class="product__card">
+  
+          <div class="product__card-header">
+  
+            <div class="product__card-header-left">
+              <h3>Nombre</h3>
+              <h4>Prod-001</h4>
+            </div>
+  
+            <div class="product__card-header-right">
+              <h3>$10,50</h3>
+            </div>
+  
+          </div>
+  
+          <div class="product__card-center">
+            <img src="../images/pantalon.jpg" alt="Pantalon">
+            <p>Pantalon Jean en venta aproveche lleve lleve solo quedan pocos son buenos son bonitos son baratos</p>
+          </div>
+  
+          <div class="product__card-footer">
+            <button id="button__abrir" class="btn_product-delete">Eliminar este producto</button>
+          </div>
+  
+        </div>
+        <div class="product__card">
+  
+          <div class="product__card-header">
+  
+            <div class="product__card-header-left">
+              <h3>Nombre</h3>
+              <h4>Prod-001</h4>
+            </div>
+  
+            <div class="product__card-header-right">
+              <h3>$10,50</h3>
+            </div>
+  
+          </div>
+  
+          <div class="product__card-center">
+            <img src="../images/pantalon.jpg" alt="Pantalon">
+            <p>Pantalon Jean en venta aproveche lleve lleve solo quedan pocos son buenos son bonitos son baratos</p>
+          </div>
+  
+          <div class="product__card-footer">
+            <button class="btn_product-delete">Eliminar este producto</button>
+          </div>
+  
+        </div>
+        
+
+        <div class="product__card">
+  
+          <div class="product__card-header">
+  
+            <div class="product__card-header-left">
+              <h3>Nombre</h3>
+              <h4>Prod-001</h4>
+            </div>
+  
+            <div class="product__card-header-right">
+              <h3>$10,50</h3>
+            </div>
+  
+          </div>
+  
+          <div class="product__card-center">
+            <img src="../images/corazon.svg" alt="Pantalon">
+            <p>Pantalon Jean en venta aproveche lleve lleve solo quedan pocos son buenos son bonitos son baratos</p>
+          </div>
+  
+          <div class="product__card-footer">
+            <button class="btn_product-delete">Eliminar este producto</button>
+          </div>
+
+        </div>
+
+        <div class="product__card">
+  
+          <div class="product__card-header">
+  
+            <div class="product__card-header-left">
+              <h3>Nombre</h3>
+              <h4>Prod-001</h4>
+            </div>
+  
+            <div class="product__card-header-right">
+              <h3>$10,50</h3>
+            </div>
+  
+          </div>
+  
+          <div class="product__card-center">
+            <img src="../images/pantalon.jpg" alt="Pantalon">
+            <p>Pantalon Jean en venta aproveche lleve lleve solo quedan pocos son buenos son bonitos son baratos</p>
+          </div>
+  
+          <div class="product__card-footer">
+            <button class="btn_product-delete">Eliminar este producto</button>
+          </div>
+  
+        </div>
+        
+
+        <div class="product__card">
+  
+          <div class="product__card-header">
+  
+            <div class="product__card-header-left">
+              <h3>Nombre</h3>
+              <h4>Prod-001</h4>
+            </div>
+  
+            <div class="product__card-header-right">
+              <h3>$10,50</h3>
+            </div>
+  
+          </div>
+  
+          <div class="product__card-center">
+            <img src="../images/corazon.svg" alt="Pantalon">
+            <p>Pantalon Jean en venta aproveche lleve lleve solo quedan pocos son buenos son bonitos son baratos </p>
+          </div>
+  
+          <div class="product__card-footer">
+            <button class="btn_product-delete">Eliminar este producto</button>
+          </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+
+  <div class="overlay" id="overlay">
+    <div class="popup" id="popup">
+      <h3>¿Está seguro de eliminar este producto?</h3>
+      
+      <div class="buttons">
+        <button class="buttons__delete" id="button__delete">Eliminar mi cuenta</button>
+        <button class="buttons__cancel" id="button__cancel">Cancelar</button>
+      </div>
+
+    </div>
+
+    <div class="popup2" id="popup2">
+      <h3>Producto eliminado satisfactoriamente</h3>
+    </div>
+
+  </div>
+
+  <script src="./katarogu.js"></script>
+</body>
+</html>

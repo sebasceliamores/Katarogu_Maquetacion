@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;700;800&display=swap"
+  rel="stylesheet"
+  />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+  rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./edit-info-contact.css">
+  <title>Información de contacto</title>
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <span>NombreTienda</span>
+      <img src="../images/ajustes.svg" alt="Ajustes">
+    </header>
+    
+    <section class="container__social">
+      <div class="container__social-whatsapp">
+        <img class="img__whatsapp" src="../images/whatsapp.svg" alt="Whatsapp" />
+        <input type="text" class="name__whatsapp input" placeholder="Nombre" />
+        <input type="text" class="number__whatsapp input" placeholder="Número"/>
+      </div>
+  
+      <div class="container__social-fb">
+        <img class="img__fb" src="../images/facebook.svg" alt="Facebook">
+        <input type="text" class="input name__fb" placeholder="Nombre de página"/>
+        <input type="url" class="input url__fb" placeholder="https://facebook.com/username" />
+      </div> 
+  
+      <div class="container__social-instagram">
+        <img class="img__instagram" src="../images/instagram.svg" alt="Instagram">
+        <input type="text" class="input__instagram input" placeholder="@username"/>
+        <input type="text" class="input__instagram input input2" placeholder="@username"/>
+      </div>
+    </section>
+    
+    <section class="container__medium">
+      <div class="container__medium-info">
+        <input class="email input" type="email" placeholder="Email"/>
+        <input type="text" class="input name__store" placeholder="Nombre de empresa" />
+      </div>
+  
+      <div class="container__medium-check">
+        <input onchange=onChange() type="checkbox" id="checkbox">
+        <label for="checkbox">Tengo tienda física</label>
+      </div>
+    </section>
+
+
+    <section class="container__store none" id="container__store">
+      <div class="container__store-direction">
+        <h2>Dirección</h2>
+        <input type="text" class="input" placeholder="Calle principal" />
+        <input type="text" class="input" placeholder="Calle secundaria" />
+      </div>
+
+      <div class="container__store-attention">
+        <h2>¿Que tipo de atención esta brindando actualmente en su tienda física?</h2>
+        <select onchange=onSelect(this) class="cb__attention" id="select_attention">
+          <option hidden selected >Elija una opción</option>
+          <option value="Atención normal">Atención normal</option>
+          <option value="Atención parcial">Atención parcial</option>
+          <option value="No estoy atendiendo">No estoy atendiendo</option>
+        </select>
+
+
+          <div id="div_h3" class="div__h3 isVisible">
+            <h3>Provincia</h3>
+            <h3>ciudad</h3>
+          </div>
+          
+          <div id="select_city" class="div__select isVisible">
+            <select id="" class="cb__provincia">
+              <option hidden selected >Elija una opción</option>
+              <option>Esmeraldas</option>
+            </select>
+            <select id="" class="cb__ciudad">
+              <option hidden selected >Elija una opción</option>
+              <option >Esmeraldas</option>
+            </select>
+
+          </div>
+
+      </div>
+
+
+      <div id="select_schedule" class="container__store-schedule isVisible">
+        <h2>Horario de atención</h2>
+        <h3>Desde</h3>
+        <div class="container__store-schedule-since">
+          <select id="" class="cb__since-hour">
+            <option hidden selected >1-12</option>
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>
+            <option value="4" >4</option>
+            <option value="5" >5</option>
+            <option value="6" >6</option>
+            <option value="7" >7</option>
+            <option value="8" >8</option>
+            <option value="9" >9</option>
+            <option value="10" >10</option>
+            <option value="11" >11</option>
+            <option value="12" >12</option>
+          </select>
+          <select id="" class="cb__since-hour2">
+            <option hidden selected>AM-PM</option>
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+        </div>
+
+        <h3>Hasta</h3>
+        <div class="container__store-schedule-until">
+          <select id="" class="cb__until-hour">
+            <option hidden selected >1-12</option>
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>
+            <option value="4" >4</option>
+            <option value="5" >5</option>
+            <option value="6" >6</option>
+            <option value="7" >7</option>
+            <option value="8" >8</option>
+            <option value="9" >9</option>
+            <option value="0" >10</option>
+            <option value="11" >11</option>
+            <option value="12" >12</option>
+          </select>
+          <select id="" class="cb__until-hour2">
+            <option hidden selected>AM-PM</option>
+            <option value="AM">AM</option>
+            <option value="AM">PM</option>
+          </select>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div class="container__buttons">
+      <button class="button">Guardar</button>
+      <button class="button button2">Eliminar</button>
+    </div>
+
+    <div class="container__button">
+      <button id="button__abrir"  class="button button2">Quiero eliminar mi cuenta</button>
+    </div>
+
+
+    <div class="overlay" id="overlay">
+      <div class="popup" id="popup">
+        <h3>¿Está seguro de eliminar su cuenta?</h3>
+        <h4>Sus datos serán borrados permanentemente, o podria <br/> suspender
+          su cuenta temporalmente y sus datos <br/>se mantendrán sin que su catálogo sea visible
+        </h4>
+        <div class="buttons">
+          <button class="buttons__delete" id="button__delete">Eliminar mi cuenta</button>
+          <button class="buttons__suspend" id="button__suspend">Suspender mi cuenta</button>
+          <button class="buttons__cancel" id="button__cancel">Cancelar</button>
+        </div>
+      </div>
+  
+      <div class="popup2" id="popup2">
+        <h3>Su cuenta ha sido eliminada satisfactoriamente</h3>
+      </div>
+  
+      <div class="popup3" id="popup3">
+        <h3>Su cuenta ha sido suspendida satisfactoriamente</h3>
+      </div>
+  
+    </div>
+    
+  </div>
+
+
+
+  <script src="./edit-info_contact.js"></script>
+</body>
+</html>
